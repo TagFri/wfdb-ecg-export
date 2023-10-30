@@ -111,7 +111,7 @@ print(f'THE TOTAL NUMBER OF ECGS ARE {len(uniqeEcg)}')
 #--------------------------
 ### EXPORT CSV WITH ORIGINAL ECG ID VS NEW ID
 #--------------------------
-f = open('/Users/agfr/Documents/prosjektoppgaveOK/02eksport/originalECG/00orginalECGID.csv', 'w')
+f = open('00orginalECGID.csv', 'w')
 writer = csv.writer(f)
 i = 1
 for id in uniqeEcg:
@@ -125,7 +125,7 @@ print(f'-> CSV with original vs. new number has been exported')
 #--------------------------
 ### EXPORT LIST OF GENDER/AGE TO USE IN CHECKLIST
 #--------------------------
-f = open('/Users/agfr/Library/Mobile Documents/com~apple~CloudDocs/Åge:Vetle delemappe/01 IN ACTION/01 Prosjektoppgave/1 Seleksjon/ECGexport/ageAndGender.csv', 'w')
+f = open('/ageAndGender.csv', 'w')
 writer = csv.writer(f)
 i = 1
 for id in uniqeEcg:
@@ -187,7 +187,7 @@ for id in uniqeEcg:
         return_fig=True)        #Lagre bilde
 
     #Save figure to local location
-    path = '/Users/agfr/Library/Mobile Documents/com~apple~CloudDocs/Åge:Vetle delemappe/01 IN ACTION/01 Prosjektoppgave/1 Seleksjon/ECGexport/' + ecgName
+    path = 'LOCALPATH' + ecgName
     plt.savefig(path + '.pdf', format="pdf", bbox_inches="tight")
     #Clear figure to avoid memory overload
     plt.clf()
